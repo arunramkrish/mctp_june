@@ -55,6 +55,11 @@ public class SearchTest {
 	}
 
 	@Test
+	public void testAddNullContacts() {
+		search.addContacts(null);
+	}
+
+	@Test
 	public void testSearchContactContact() {
 		fail("Not yet implemented");
 	}

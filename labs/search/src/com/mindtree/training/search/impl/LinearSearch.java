@@ -4,16 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mindtree.training.entity.Contact;
+import com.mindtree.training.io.ContactStore;
 import com.mindtree.training.search.Search;
 
 public class LinearSearch implements Search {
 	private List<Contact> contacts = new ArrayList<Contact>(); 
-			
+	private ContactStore contactStore = new ContactStore("contacts.csv");
+	
 	@Override
 	public void addContacts(List<Contact> contacts) {
+		if (contacts == null) {
+			return;
+		}
 		for(Contact contact : contacts) {
 			this.contacts.add(contact);
 		}
+		
+		contactStore.addContacts(contacts);
 		
 		//below code is same as the above one
 //		this.contacts.addAll(contacts);

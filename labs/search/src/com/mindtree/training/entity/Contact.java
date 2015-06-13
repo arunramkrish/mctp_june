@@ -2,7 +2,7 @@ package com.mindtree.training.entity;
 
 import java.util.Date;
 
-public class Contact {
+public class Contact implements Comparable<Contact> {
 	private String name;
 	private String phoneNo;
 	private Date dateOfBirth;
@@ -44,8 +44,7 @@ public class Contact {
 
 	@Override
 	public String toString() {
-		return "Contact [name=" + name + ", phoneNo=" + phoneNo
-				+ ", dateOfBirth=" + dateOfBirth + "]";
+		return name + "," + phoneNo + "," + dateOfBirth;
 	}
 
 	@Override
@@ -80,9 +79,14 @@ public class Contact {
 	}
 
 	public static void main(String[] args) {
-		Contact a = new Contact("Arun","9449804064",new Date());
-		Contact b = new Contact("Arun","9449804064",null);
-		
+		Contact a = new Contact("Arun", "9449804064", new Date());
+		Contact b = new Contact("Arun", "9449804064", null);
+
 		System.out.println(a.equals(b));
+	}
+
+	@Override
+	public int compareTo(Contact o) {
+		return this.name.toLowerCase().compareTo(o.name.toLowerCase());
 	}
 }
