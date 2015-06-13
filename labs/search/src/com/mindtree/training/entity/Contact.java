@@ -80,8 +80,8 @@ public class Contact {
 	}
 
 	public static void main(String[] args) {
-		Contact a = new Contact();
-		Contact b = new Contact();
+		Contact a = new Contact("Arun","9449804064",new Date());
+		Contact b = new Contact("Arun","9449804064",null);
 		
 		System.out.println(a.equals(b));
 	}
