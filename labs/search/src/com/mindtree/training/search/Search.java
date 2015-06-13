@@ -10,4 +10,8 @@ public interface Search {
 	Contact searchContact(Contact contactToSearch);
 	
 	List<Contact> searchContact(String name);
+	
+	void init();
+	
+	int getContactsCount();
 }

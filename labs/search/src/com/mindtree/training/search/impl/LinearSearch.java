@@ -54,4 +54,14 @@ public class LinearSearch implements Search {
 		return matchingContacts;
 	}
 
+	@Override
+	public void init() {
+		contacts.clear();
+	}
+
+	@Override
+	public int getContactsCount() {
+		return contacts.size();
+	}
+
 }

@@ -25,4 +25,16 @@ public class BinarySearch implements Search {
 		return null;
 	}
 
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getContactsCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
